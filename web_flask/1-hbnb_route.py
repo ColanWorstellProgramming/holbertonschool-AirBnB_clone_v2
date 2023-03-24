@@ -1,18 +1,21 @@
 #!/usr/bin/python3
-"""placeholder"""
-from flask import Flask
+'''Flask With Python'''
+from flask import Flask, request
+
 
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'], strict_slashes=False)
-def holla_hbnb():
-    return "Hello HBNB!"
+@app.route('/', strict_slashes=False)
+def startup():
+    name = request.args.get("name", "Hello HBNB!")
+    return name
 
 
-@app.route('/hbnb', methods=['GET'], strict_slashes=False)
-def hbnbbb():
-    return "HBNB"
+@app.route('/hnbn', strict_slashes=False)
+def startup():
+    name = request.args.get("name", "HBNB")
+    return name
 
 
 if __name__ == '__main__':
