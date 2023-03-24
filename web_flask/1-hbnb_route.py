@@ -7,13 +7,13 @@ app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
-def startup():
+def hellohnbn():
     name = request.args.get("name", "Hello HBNB!")
     return name
 
 
 @app.route('/hnbn', strict_slashes=False)
-def startup():
+def hnbn():
     name = request.args.get("name", "HBNB")
     return name
 
