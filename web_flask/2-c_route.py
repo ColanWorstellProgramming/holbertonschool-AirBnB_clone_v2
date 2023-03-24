@@ -20,8 +20,7 @@ def hnbn():
 
 @app.route('/c/<text>', strict_slashes=False)
 def C_OP(inp):
-    name = request.args.get("name", "C " + inp.replace("_", " "))
-    return name
+    return "C " + inp.replace("_", " ")
 
 
 if __name__ == '__main__':
