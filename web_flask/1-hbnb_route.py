@@ -12,7 +12,7 @@ def hellohnbn():
     return name
 
 
-@app.route('/hnbn', methods=['GET'], strict_slashes=False)
+@app.route('/hbnb', strict_slashes=False)
 def hnbn():
     name = request.args.get("name", "HBNB")
     return name
