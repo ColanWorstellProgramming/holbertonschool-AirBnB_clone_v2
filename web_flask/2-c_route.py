@@ -18,7 +18,7 @@ def hnbn():
     return name
 
 
-@app.route('/hbnb', strict_slashes=False)
+@app.route('/c/<text>', strict_slashes=False)
 def C_OP(inp):
     name = request.args.get("name", "C " + inp.replace("_", " "))
     return name
