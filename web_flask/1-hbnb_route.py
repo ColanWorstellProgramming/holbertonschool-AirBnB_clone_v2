@@ -12,10 +12,10 @@ def hellohnbn():
     return name
 
 
-@app.route('/hnbn', strict_slashes=False)
+@app.route('/hnbn', methods=['GET'], strict_slashes=False)
 def hnbn():
-    ret = request.args.get("name", "HBNB")
-    return ret
+    name = request.args.get("name", "HBNB")
+    return name
 
 
 if __name__ == '__main__':
