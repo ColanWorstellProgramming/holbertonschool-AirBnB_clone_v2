@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def startup():
-    name = request.args.get("name", "Hello HBNB!!")
+    name = request.args.get("name", "Hello HBNB!")
     return name
 
 if __name__ == '__main__':
