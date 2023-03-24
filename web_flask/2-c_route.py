@@ -13,13 +13,13 @@ def hellohnbn():
 
 
 @app.route('/hbnb', strict_slashes=False)
-def hbnb():
+def hnbn():
     name = request.args.get("name", "HBNB")
     return name
 
 
 @app.route('/c/<text>', methods=['GET'], strict_slashes=False)
-def c_is_meh(text):
+def C_OP(text):
     return "C " + text.replace("_", " ")
 
 
