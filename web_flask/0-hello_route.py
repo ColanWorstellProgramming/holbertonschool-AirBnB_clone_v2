@@ -5,9 +5,9 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'], strict_slashes=False)
+@app.route('/', strict_slashes=False)
 def startup():
-    name = request.args.get("name", "Hello World")
+    name = request.args.get("name", "Hello HBNB!!")
     return name
 
 if __name__ == '__main__':
