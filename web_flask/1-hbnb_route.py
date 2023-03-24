@@ -14,8 +14,8 @@ def hellohnbn():
 
 @app.route('/hnbn', strict_slashes=False)
 def hnbn():
-    name = request.args.get("name", "HBNB")
-    return name
+    ret = request.args.get("name", "HBNB")
+    return ret
 
 
 if __name__ == '__main__':
