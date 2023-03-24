@@ -18,7 +18,7 @@ def hnbn():
     return name
 
 
-@app.route('/c/<text>', strict_slashes=False)
+@app.route('/c/<text>', methods=['GET'], strict_slashes=False)
 def C_OP(inp):
     return "C " + inp.replace("_", " ")
 
