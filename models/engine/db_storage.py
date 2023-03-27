@@ -59,12 +59,12 @@ class DBStorage:
         inspector = inspect(self.__engine)
         return inspector.get_table_names()
 
-    def close(self):
-        self.__session.close()
-
     def hcf(self, cls):
         metadata = MetaData()
         metadata.reflect(bind=self.__engine)
         table = metadata.tables.get(cls.__tablename__)
         self.__session.execute(table.delete())
         self.save()
+
+    def close(self):
+        self.__session.close()
