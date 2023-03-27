@@ -15,7 +15,7 @@ def states_list():
 
 
 @app.teardown_appcontext
-def des():
+def des(exc):
     '''8 part 2'''
     storage.close()
 
